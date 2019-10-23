@@ -1,9 +1,9 @@
 # Notebook Test Template
 
 ## What it does
-Provides a framework to test variables and functions from student notebooks. Imports the notebook as a module, then uses pytest for the individual unit tests. 
+Provides a framework to test variables and functions from student notebooks. Imports the notebook as a module, then uses pytest for the individual unit tests.
 
-This is a [GitHub Template Repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) so copying it is as easy as clicking the green "Use this Template" button on this repo page (https://github.com/learn-co-curriculum/dsc-notebook-test-template). 
+This is a [GitHub Template Repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) so copying it is as easy as clicking the green "Use this Template" button on this repo page (https://github.com/learn-co-curriculum/dsc-notebook-test-template).
 
 Copy the template and add your own test cases to your own repo.
 
@@ -47,6 +47,17 @@ PASSED
 ```
 
 ## How to use
+
+#### Remotely
+* [Get a GitHub OAuth Token](https://github.com/settings/tokens) and paste it into the `oauth_token` variable at the top remote_grader.py
+* Run `python remote_grader.py -r user/repo-name`
+	* For example, to test this repo you would run `python remote_grader.py -r learn-co-curriculum/dsc-notebook-test-template`
+
+That's it! The script will use the GitHub API to get the notebook contents, write it to the `index.ipynb` file, and execute the tests.
+
+The `-r` or `--repo` flag is required.
+
+##### Locally
 * Copy the raw json of a student notebook `index.ipynb` file
 * Paste into the `index.ipynb` file here
 * Run `pytest` from this directory
