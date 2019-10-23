@@ -47,19 +47,11 @@ PASSED
 ```
 
 ## How to use
-* Copy the raw json of a students notebook `index.ipynb` file
+* Copy the raw json of a student notebook `index.ipynb` file
 * Paste into the `index.ipynb` file here
 * Run `pytest` from this directory
 
 ## Some Notes
-
-#### Cells that Error
-When the notebook is being imported the execution of *every cell is wrapped in a try/except*. This is to ensure that one error in a notebook will not prevent everything else from being tested. The *first line* of any cells that error will be logged to the console when the notebook is being imported during the test run. Ex:
-
-```
-* Skipping cell due to error: zebra #this var is not defined
-* Skipping cell due to error: players_on_manchester_united = get_players_on_team(players,'Manchester United')
-```
 
 #### Test Writing Guidelines
 
@@ -73,6 +65,14 @@ There are few examples of tests provided. Some guidelines:
 	* (https://docs.python.org/3/library/unittest.html#test-cases) for higher touch testing.  
 	* Ex: `assertCountEqual` is used in the examples so that lists are compared regardless of the order of elements
 * Use the `explanation_text` function to print italicized explanatory text on a newline
+
+#### Cells that Error
+When the notebook is being imported the execution of *every cell is wrapped in a try/except*. This is to ensure that one error in a notebook will not prevent everything else from being tested. The *first line* of any cells that error will be logged to the console when the notebook is being imported during the test run. Ex:
+
+```
+* Skipping cell due to error: zebra #this var is not defined
+* Skipping cell due to error: players_on_manchester_united = get_players_on_team(players,'Manchester United')
+```
 
 #### Matplotlib Limitation
 Unfortunately, any cell that has `import matplotlib.pyplot as plt` will error with:
