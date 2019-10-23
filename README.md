@@ -1,7 +1,11 @@
 # Notebook Test Template
 
 ## What it does
-Provides a framework to test variables and functions from student notebooks. Imports the notebook as a module, then uses pytest for the individual unit tests. Copy this repository and add your own test cases.
+Provides a framework to test variables and functions from student notebooks. Imports the notebook as a module, then uses pytest for the individual unit tests. 
+
+This is a [GitHub Template Repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) so copying it is as easy as clicking the green "Use this Template" button on this repo page (https://github.com/learn-co-curriculum/dsc-notebook-test-template). 
+
+Copy the template and add your own test cases to your own repo.
 
 ## Initial Setup
 * `pip install pytest`
