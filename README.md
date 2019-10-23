@@ -49,15 +49,19 @@ PASSED
 ## How to use
 
 #### Remotely
-* [Get a GitHub OAuth Token](https://github.com/settings/tokens) and paste it into the `oauth_token` variable at the top remote_grader.py
-* Run `python remote_grader.py -r user/repo-name`
-	* For example, to test this repo you would run `python remote_grader.py -r learn-co-curriculum/dsc-notebook-test-template`
+[Get a GitHub OAuth Token](https://github.com/settings/tokens) and paste it into the `oauth_token` variable at the top of `remote_grader.py`.
+
+Run:
+
+```
+python remote_grader.py -r user/repo-name
+```
+
+For example, to test this repo you would run `python remote_grader.py -r learn-co-curriculum/dsc-notebook-test-template`
 
 That's it! The script will use the GitHub API to get the notebook contents, write it to the `index.ipynb` file, and execute the tests.
 
-The `-r` or `--repo` flag is required.
-
-##### Locally
+#### Locally
 * Copy the raw json of a student notebook `index.ipynb` file
 * Paste into the `index.ipynb` file here
 * Run `pytest` from this directory
