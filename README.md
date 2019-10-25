@@ -68,9 +68,12 @@ That's it! The script will use the GitHub API to get the notebook contents, writ
 
 ## Some Notes
 
+#### Where do I Write the Tests?
+When `pytest` is run it is [looking for files](https://docs.pytest.org/en/latest/goodpractices.html#test-discovery) that match `test_*.py` or `*_test.py` and will automatically run tests found there. The example tests are written in `test_grader.py` and can be overwritten.
+
 #### Test Writing Guidelines
 
-There are few examples of tests provided. Some guidelines:
+There are a few examples of tests provided. Some guidelines:
 
 * Function names must start with `test_`. Use a descriptive name as it will be helpful to see in the output
 * Tests will display in the order written
